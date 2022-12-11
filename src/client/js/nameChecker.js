@@ -1,16 +1,12 @@
 function checkForName(inputText) {
     console.log("::: Running checkForName :::", inputText);
-    let names = [
-        "Picard",
-        "Janeway",
-        "Kirk",
-        "Archer",
-        "Georgiou"
-    ]
+    let inputElem = document.getElementById('name');
+    inputElem.value = inputText;
 
-    if(names.includes(inputText)) {
-        alert("Welcome, Captain!")
+    if (inputElem.checkValidity()) {
+        return true;
+    }else {
+        return false;
     }
 }
-
 export {checkForName}

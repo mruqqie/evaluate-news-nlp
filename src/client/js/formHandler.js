@@ -4,7 +4,7 @@ function handleSubmit(event) {
     // check what text was put into the form field
     let formText = document.getElementById('name').value
     if(Client.checkForName(formText)) {
-        fetch('http://localhost:8080/addData', {
+        fetch('http://localhost:8081/addData', {
             method: 'POST',
             credentials: 'same-origin',
             headers: {
