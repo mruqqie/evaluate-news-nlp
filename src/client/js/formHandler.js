@@ -14,6 +14,7 @@ function handleSubmit(event) {
         })
         .then(res => res.json())
         .then((res) => {
+            document.getElementById('url').innerHTML = `URL: ${formText}`;
             document.getElementById('agreement').innerHTML = `Agreement: ${res.agreement}`;
             document.getElementById('confidence').innerHTML = `Confidence: ${res.confidence}`;
             document.getElementById('irony').innerHTML = `Irony: ${res.irony}`;
@@ -23,6 +24,7 @@ function handleSubmit(event) {
     } else {
         alert('Invalid URL')
     };
+    document.getElementById('form').reset()
 }
 
 export {handleSubmit}
